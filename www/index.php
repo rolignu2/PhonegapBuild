@@ -25,14 +25,30 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+        <title>Aplicacion desarrollada phonegap</title>
     </head>
     <body>
         <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-
-            </div>
+        <div class="ui-grid-a">
+            <?php
+            
+            for($i =0 ; $i< 6 ;$i++)
+            {
+                if($i<=2)
+                {
+                  echo '<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">'. ($i+1) .'</div></div>';
+                }
+                else
+                {
+                  '<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">' . ($i+1) .'</div></div>';
+                }
+            }
+            ?>
+        </div><!-- /grid-a -->
+            
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
